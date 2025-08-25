@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DND Spell Organizer</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="classLevels">
+        <p>Enter your character's Stats</p>
+        <span>
+            <span><label for="Strength">Strength: </label><input type="number" name="Strength" id="Strength" min="1" max="30" value="10"></span>
+            <span><label for="Dexterity">Dexterity: </label><input type="number" name="Dexterity" id="Dexterity" min="1" max="30" value="10"></span>
+            <span><label for="Constitution">Constitution: </label><input type="number" name="Constitution" id="Constitution" min="1" max="30" value="10"></span>
+        </span>
+        <span>
+            <span><label for="Intelligence">Intelligence: </label><input type="number" name="Intelligence" id="Intelligence" min="1" max="30" value="10"></span>
+            <span><label for="Wisdom">Wisdom: </label><input type="number" name="Wisdom" id="Wisdom" min="1" max="30" value="10"></span>
+            <span><label for="Charisma">Charisma: </label><input type="number" name="Charisma" id="Charisma" min="1" max="30" value="10"></span>
+        </span>
+        <p>Enter the levels of your character:</p>
+        <span><label for="Artificer">Artificer: </label><input type="number" name="Artificer" id="Artificer" min="0" max="20" value="0"></span>
+        <span><label for="Bard">Bard: </label><input type="number" name="Bard" id="Bard" min="0" max="20" value="0"></span>
+        <span><label for="Barbarian">Barbarian: </label><input type="number" name="Barbarian" id="Barbarian" min="0" max="20" value="0"></span>
+        <span><label for="Cleric">Cleric: </label><input type="number" name="Cleric" id="Cleric" min="0" max="20" value="0"></span>
+        <span><label for="Druid">Druid: </label><input type="number" name="Druid" id="Druid" min="0" max="20" value="0"></span>
+        <span><label for="Fighter">Fighter: </label><input type="number" name="Fighter" id="Fighter" min="0" max="20" value="0"></span><span><label for="FighterCaster">Caster subclass?</label><input type="checkbox" name="FighterCaster" id="FighterCaster"></span>
+        <span><label for="Monk">Monk: </label><input type="number" name="Monk" id="Monk" min="0" max="20" value="0"></span>
+        <span><label for="Paladin">Paladin: </label><input type="number" name="Paladin" id="Paladin" min="0" max="20" value="0"></span>
+        <span><label for="Ranger">Ranger: </label><input type="number" name="Ranger" id="Ranger" min="0" max="20" value="0"></span>
+        <span><label for="Rogue">Rogue: </label><input type="number" name="Rogue" id="Rogue" min="0" max="20" value="0"></span><span><label for="RogueCaster">Caster subclass?</label><input type="checkbox" name="RogueCaster" id="RogueCaster"></span>
+        <span><label for="Sorcerer">Sorcerer: </label><input type="number" name="Sorcerer" id="Sorcerer" min="0" max="20" value="0"></span>
+        <span><label for="Warlock">Warlock: </label><input type="number" name="Warlock" id="Warlock" min="0" max="20" value="0"></span>
+        <span><label for="Wizard">Wizard: </label><input type="number" name="Wizard" id="Wizard" min="0" max="20" value="0"></span>
+        <button type="button" onclick="hideUnusedLevels()">Hide Unused Classes</button>
+        <div id="hideInput">
+            <button onclick="hideInput()">but</button>
+        </div>
+    </div>
+
+    <script src="js/solveLevels.js"></script>
+    <script src="js/userInterface.js"></script>
+</body>
+</html>

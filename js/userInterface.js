@@ -17,3 +17,7 @@ function hideInput() {
         isInputHide = true;
     }
 }
+
+function openAddSpell() {
+    
+}

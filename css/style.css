@@ -3,7 +3,7 @@
     flex-direction: column;
     position: absolute;
     justify-content: center;
-    background-color: aqua;
+    background-color: rgb(36, 184, 10);
     border: black 1px solid;
     transition: 2s;
 

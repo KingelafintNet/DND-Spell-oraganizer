@@ -21,3 +21,22 @@
     position: absolute;
     border: black 1px solid;
 }
+
+#newSpellGui {
+    display: none;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(18, 169, 171);
+    border: black 1px solid;
+    width: 300px;
+    margin-left: 100px;
+}
+
+#newSpellGui span { 
+    display: flex;
+    justify-content: space-between;
+}
+
+#newSpellGui label {
+    padding: 5px;
+}

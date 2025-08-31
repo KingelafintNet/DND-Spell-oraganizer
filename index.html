@@ -39,11 +39,27 @@
         </div>
     </div>
     <div id="newSpell">
-        <button onclick="openAddSpell()">Add spell</button>
+        <button type="button" onclick="openAddSpellGui()">Add spell</button>
+        <div id="newSpellGui">
+            <span><label for="spellName">Spell Name</label><input type="text" id="spellName"></span>
+            <span><label for="spellLevel">Spell Level</label><input type="text" id="spellLevel"></span>
+            <span><label for="spellSchool">Spell School</label><input type="text" id="spellSchool"></span>
+            <span><label for="spellRange">Spell Range</label><input type="text" id="spellRange"></span>
+            <span><label for="spellRitual">Ritual Casting</label><input type="checkbox" id="spellRitual"></span>
+            <span><label for="spellCastTime">Casting Time</label><input type="text" id="spellCastTime"></span>
+            <span><label for="spellComponents">Spell Components</label><input type="text" id="spellComponents"></span>
+            <span><label for="spellDuration">Spell Duration</label><input type="text" id="spellDuration"></span>
+            <span><label for="spellConcentration">Concentration</label><input type="checkbox" id="spellConcentration"></span>
+            <span><label for="spellClasses">Classes</label><input type="text" id="spellClasses"></span>
+            <span><label for="spellDescription">Description</label><input type="text" id="spellDescription"></span>
+            
+            <button type="button" onclick="addSpell()">Upload Spell</button>
+        </div>
     </div>
 
 
     <script src="js/solveLevels.js"></script>
     <script src="js/userInterface.js"></script>
+    <script src="js/spellHandler.js"></script>
 </body>
 </html>

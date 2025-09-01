@@ -29,20 +29,32 @@ function compileCharacter() {
     // let cha = document.getElementById("Cha").value;
 
     let main = document.getElementById("main");
-    for (let i = 16; i > 0; i--) {
+    for (let i = 64; i > 0; i--) {
         let add = document.createElement("div");
         add.style.position = "absolute";
         add.style.height = "30px";
-        add.style.width = i*30+"px";
-        add.style.backgroundColor = "rgba("+8*i+","+8*i+","+8*i+", 10)"
+        add.style.width = i*20+"px";
+        add.style.top = "0px";
+        add.style.left = "0px";
+        add.style.display = "flex";
+        add.style.justifyContent = "flex-end";
+        add.style.backgroundColor = "rgba("+4*i+","+4*i+","+4*i+", 10)";
+        add.innerText = i;
+        add.style.color = "red";
         main.appendChild(add);
     }
-    for (let i = 16; i > 0; i--) {
+    for (let i = 64; i > 0; i--) {
         let add = document.createElement("div");
         add.style.position = "absolute";
         add.style.width = "30px";
-        add.style.height = i*30+"px";
-        add.style.backgroundColor = "rgba("+8*i+","+8*i+","+8*i+", 10)"
+        add.style.top = "0px";
+        add.style.left = "0px";
+        add.style.height = i*20+"px";
+        add.style.display = "flex";
+        add.style.alignItems = "flex-end";
+        add.style.backgroundColor = "rgba("+4*i+","+4*i+","+4*i+", 10)";
+        add.innerText = i;
+        add.style.color = "red";
         main.appendChild(add);
     }
 }

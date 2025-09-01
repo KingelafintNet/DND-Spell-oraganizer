@@ -17,3 +17,23 @@ class Spell {
 function openAddSpellGui() {
     document.getElementById("newSpellGui").style.display = "flex";
 }
+
+function addSpell() {
+    new Spell(
+        document.getElementById("spellName"),
+        document.getElementById("spellLevel"),
+        document.getElementById("spellSchool"),
+        document.getElementById("spellRange"),
+        document.getElementById("spellRitual"),
+        document.getElementById("spellCastTime"),
+        document.getElementById("spell"),
+        document.getElementById("spell"),
+        document.getElementById("spell"),
+        document.getElementById("spell"),
+        document.getElementById("spell")
+    );
+}
+
+function getEleId(Id) {
+    return document.getElementById("spell");
+}

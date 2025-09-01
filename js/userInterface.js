@@ -19,14 +19,14 @@ function hideInput() {
 }
 
 function compileCharacter() {
-    document.getElementById("classLevels").style.display = "none";
-    document.getElementById("newSpell").style.display = "none";
-    let str = document.getElementById("Str").value;
-    let dex = document.getElementById("Dex").value;
-    let con = document.getElementById("Con").value;
-    let int = document.getElementById("Int").value;
-    let wis = document.getElementById("Wis").value;
-    let cha = document.getElementById("Cha").value;
+    // document.getElementById("classLevels").style.display = "none";
+    // document.getElementById("newSpell").style.display = "none";
+    // let str = document.getElementById("Str").value;
+    // let dex = document.getElementById("Dex").value;
+    // let con = document.getElementById("Con").value;
+    // let int = document.getElementById("Int").value;
+    // let wis = document.getElementById("Wis").value;
+    // let cha = document.getElementById("Cha").value;
 
     let main = document.getElementById("main");
     for (let i = 16; i > 0; i--) {
@@ -46,3 +46,5 @@ function compileCharacter() {
         main.appendChild(add);
     }
 }
+
+window.onload(compileCharacter());

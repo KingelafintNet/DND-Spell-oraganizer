@@ -40,3 +40,9 @@
 #newSpellGui label {
     padding: 5px;
 }
+
+#main {
+    width: 360px;
+    height: 700px;
+    border: solid black 1px;
+}

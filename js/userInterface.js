@@ -62,7 +62,7 @@ function compileCharacter() {
     // }
 }
 
-function setHealth(damage) {
+function damageHealth(damage) {
     let parent = document.getElementById("hpBar");
 
     hp = Math.min(Math.max(hp - damage, 0), hpMax);

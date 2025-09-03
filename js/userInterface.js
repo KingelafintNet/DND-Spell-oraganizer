@@ -1,4 +1,6 @@
 let isInputHide = false;
+let hpMax = 100;
+let hp = hpMax;
 
 function hideInput() {
     if (isInputHide) {
@@ -58,4 +60,10 @@ function compileCharacter() {
     //     add.style.color = "red";
     //     main.appendChild(add);
     // }
+}
+
+function setHealth(damage) {
+    let parent = document.getElementById("hpBar");
+
+    hp = Math.min(Math.max(hp - damage, 0), hpMax);
 }

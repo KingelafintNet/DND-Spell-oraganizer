@@ -45,4 +45,18 @@
     width: 360px;
     height: 700px;
     border: solid black 1px;
+    position: relative;
+}
+
+body {
+    margin: 0px;
+}
+
+#hpBar {
+    width:180px;
+    height:50px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

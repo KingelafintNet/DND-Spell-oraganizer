@@ -61,3 +61,15 @@ body {
     flex-direction: column;
     align-items: center;
 }
+
+#hpColor1, #hpColor2 {
+    width: 90px;
+    background-color: #00FF00;
+    top:0px;
+    height: 30px;
+    position: relative;
+}
+
+#hpBar>div {
+    display: flex;
+}

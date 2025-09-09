@@ -1,5 +1,5 @@
 let isInputHide = false;
-let hpMax = 100;
+let hpMax = 10;
 let hp = hpMax;
 
 function hideInput() {
@@ -63,7 +63,21 @@ function compileCharacter() {
 }
 
 function damageHealth(damage) {
-    let parent = document.getElementById("hpBar");
-
-    hp = Math.min(Math.max(hp - damage, 0), hpMax);
+    let color1 = document.getElementById("hpColor1");
+    let text = document.getElementById("hpText");
+    let color2 = document.getElementById("hpColor2");
+    hp = hp - damage;
+    let left;
+    let color = "hsl("+String(120*hp/hpMax)+",100%,50%)";
+    text.innerText = hp+"/"+hpMax;
+    if (hp/hpMax > 0.5) {
+        left = (hp/hpMax)*180-180;
+        color2.style.backgroundColor = color;
+    } else {
+        left = (hp/hpMax)*180-90;
+        color2.style.backgroundColor = "blue";
+    }
+    color1.style.backgroundColor = color;
+    console.log(left);
+    color2.style.left = String(left)+"px";
 }

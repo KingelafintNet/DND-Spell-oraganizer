@@ -67,18 +67,18 @@ function damageHealth(damage) {
     let text = document.getElementById("hpText");
     let color2 = document.getElementById("hpColor2");
     hp = hp - damage;
+    hp = (hp>0)?(hp>hpMax)?hpMax:hp:0;
     let left;
     let color = "hsl("+String(120*hp/hpMax)+",100%,50%)";
     text.innerText = hp+"/"+hpMax;
+    left = (hp/hpMax)*180-90;
     if (hp/hpMax > 0.5) {
-        left = (hp/hpMax)*180-180;
+        left = left - 90;
         color2.style.backgroundColor = color;
     } else {
-        left = (hp/hpMax)*180-90;
         color2.style.backgroundColor = "rgb(0, 0, 77)";
     }
     color1.style.backgroundColor = color;
     text.style.color = color;
-    console.log(left);
     color2.style.left = String(left)+"px";
 }

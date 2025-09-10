@@ -75,9 +75,10 @@ function damageHealth(damage) {
         color2.style.backgroundColor = color;
     } else {
         left = (hp/hpMax)*180-90;
-        color2.style.backgroundColor = "blue";
+        color2.style.backgroundColor = "rgb(0, 0, 77)";
     }
     color1.style.backgroundColor = color;
+    text.style.color = color;
     console.log(left);
     color2.style.left = String(left)+"px";
 }

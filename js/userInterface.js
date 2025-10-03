@@ -1,6 +1,7 @@
 let isInputHide = false;
-let hpMax = 10;
+let hpMax = 100;
 let hp = hpMax;
+let temphp = 0;
 
 function hideInput() {
     if (isInputHide) {
@@ -19,7 +20,6 @@ function hideInput() {
         isInputHide = true;
     }
 }
-
 function compileCharacter() {
     // My phone screen is 360px in width, and 700px in height
     document.getElementById("classLevels").style.display = "none";
@@ -62,15 +62,38 @@ function compileCharacter() {
     // }
 }
 
-function damageHealth(damage) {
+function manageHealth(button) {
+    switch (button) {
+        case "Damage":
+            let damage = getNumberViaUser("How much damage do you take?");
+            let tempTemp = temphp;
+            temphp = (damage>=temphp)?0:damage-temphp;
+            damage = Math.max(damage - tempTemp,0);
+            hp = hp - damage;
+            hp = (hp>0)?(hp>hpMax)?hpMax:hp:0;
+            break;
+        case "Heal":
+            let healing = getNumberViaUser("How healing do you get?")
+            hp = hp + healing;
+            hp = (hp>0)?(hp>hpMax)?hpMax:hp:0;
+            break;
+        case "TempHP":
+            temphp = getNumberViaUser("What is the new temp HP?");
+            break;
+        default:
+            break;
+    }
     let color1 = document.getElementById("hpColor1");
     let text = document.getElementById("hpText");
     let color2 = document.getElementById("hpColor2");
-    hp = hp - damage;
-    hp = (hp>0)?(hp>hpMax)?hpMax:hp:0;
     let left;
     let color = "hsl("+String(120*hp/hpMax)+",100%,50%)";
-    text.innerText = hp+"/"+hpMax;
+    console.log(temphp);
+    if (temphp>0) {
+        text.innerHTML = "<span style='color:"+color+";'>"+hp+"/"+hpMax+"</span> + "+temphp;
+    } else {
+        text.innerHTML = "<span style='color:"+color+";'>"+hp+"/"+hpMax+"</span>";
+    }
     left = (hp/hpMax)*180-90;
     if (hp/hpMax > 0.5) {
         left = left - 90;
@@ -78,7 +101,21 @@ function damageHealth(damage) {
     } else {
         color2.style.backgroundColor = "rgb(0, 0, 77)";
     }
+    document.getElementById("tempHP").style.width = ((temphp>hpMax)?hpMax*180:(180*temphp/hpMax))+"px";
     color1.style.backgroundColor = color;
-    text.style.color = color;
     color2.style.left = String(left)+"px";
+}
+
+// Function to get a valid number from the user
+function getNumberViaUser(message) {
+    let userInput;
+    do {
+        userInput = prompt(message); // Prompt the user for input
+        // Check if the input is a valid number
+        if (userInput == null) {
+            alert("You canceled the input.");
+            return null; // Exit if the user clicks "Cancel"
+        }
+    } while (isNaN(userInput) || userInput.trim() === ""); // Repeat if input is not a valid number
+    return Number(userInput);
 }

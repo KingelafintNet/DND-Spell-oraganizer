@@ -26,11 +26,11 @@ function addSpell() {
         document.getElementById("spellRange"),
         document.getElementById("spellRitual"),
         document.getElementById("spellCastTime"),
-        document.getElementById("spell"),
-        document.getElementById("spell"),
-        document.getElementById("spell"),
-        document.getElementById("spell"),
-        document.getElementById("spell")
+        document.getElementById("spellComponents"),
+        document.getElementById("spellDuration"),
+        document.getElementById("spellConcentration"),
+        document.getElementById("spellClasses"),
+        document.getElementById("spellDescription")
     );
 }
 

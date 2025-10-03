@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DND Spell Organizer</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/hp.css">
 </head>
 <body><!--
     <div id="classLevels">
@@ -37,7 +38,7 @@
         <div id="hideInput">
             <button onclick="hideInput()" id="toggleInputButton">&rlarr;</button>
         </div>
-    </div>
+    </div>--><!--
     <div id="newSpell">
         <button type="button" onclick="openAddSpellGui()">Add spell</button>
         <div id="newSpellGui">
@@ -58,12 +59,19 @@
     </div>-->
 
     <div id="main">
-        <div id="hpBar">
-            <span id="hpText">10/10</span>
-            <!--<button type="button" onclick="damageHealth(1)">damage</button>-->
-            <div>
-                <div id="hpColor1">&nbsp;</div>
-                <div id="hpColor2">&nbsp;</div>
+        <div id="hpSystem">
+            <div id="hpBar">
+                <span id="hpText">10/10</span>
+                <div>
+                    <div id="hpColor1">&nbsp;</div>
+                    <div id="hpColor2">&nbsp;</div>
+                    <div id="tempHP">&nbsp;</div>
+                </div>
+            </div>
+            <div id="hpEdit">
+                <button type="button" onclick="manageHealth('Damage')">Damage</button>
+                <button type="button" onclick="manageHealth('Heal')">Heal</button>
+                <button type="button" onclick="manageHealth('TempHP')">Temp HP</button>
             </div>
         </div>
     </div>

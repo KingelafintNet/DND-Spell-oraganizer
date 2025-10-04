@@ -1,6 +1,8 @@
 class Attack {
-    constructor(parameters) {
-        
+    constructor(name,statUsed,damageDie) {
+        this.name = name;
+        this.statUsed = statUsed;
+        this.damageDie = damageDie;
     }
 }
 

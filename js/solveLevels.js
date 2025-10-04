@@ -1,5 +1,6 @@
 const classes = ["Artificer","Bard","Barbarian","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"]
 let levels = [];
+let characterLevel;
 let casterLevel = 0;
 
 function hideUnusedLevels() {
@@ -26,6 +27,26 @@ function hideUnusedLevels() {
     if (document.getElementById("RogueCaster").value) {
         casterLevel += levels[9]/3;
     }
-    console.log(casterLevel);
+    characterLevel=() => {
+        let sum;
+        levels.forEach(element => {
+            sum+=element;
+        });
+        return sum;
+    };
+    characterLevel=characterLevel.apply();
+    abilityScores.set("STR", document.getElementById("Str").value);
+    abilityScores.set("DEX", document.getElementById("Dex").value);
+    abilityScores.set("CON", document.getElementById("Con").value);
+    abilityScores.set("INT", document.getElementById("Int").value);
+    abilityScores.set("WIS", document.getElementById("Wis").value);
+    abilityScores.set("CHA", document.getElementById("Cha").value);
+    abilityScores.set("STRmod", Math.floor(((abilityScores.get("STR")-10)/2)));
+    abilityScores.set("DEXmod", Math.floor(((abilityScores.get("DEX")-10)/2)));
+    abilityScores.set("CONmod", Math.floor(((abilityScores.get("CON")-10)/2)));
+    abilityScores.set("INTmod", Math.floor(((abilityScores.get("INT")-10)/2)));
+    abilityScores.set("WISmod", Math.floor(((abilityScores.get("WIS")-10)/2)));
+    abilityScores.set("CHAmod", Math.floor(((abilityScores.get("CHA")-10)/2)));
+    addAttackArgs("Greataxe","STR","1d12");
 }
 

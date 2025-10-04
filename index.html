@@ -7,7 +7,49 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/hp.css">
 </head>
-<body><!--
+<body>
+    <!--<div id="newSpell">
+        <button type="button" onclick="openAddSpellGui()">Add spell</button>
+        <div id="newSpellGui">
+            <span><label for="spellName">Spell Name</label><input type="text" id="spellName"></span>
+            <span><label for="spellLevel">Spell Level</label><input type="text" id="spellLevel"></span>
+            <span><label for="spellSchool">Spell School</label><input type="text" id="spellSchool"></span>
+            <span><label for="spellRange">Spell Range</label><input type="text" id="spellRange"></span>
+            <span><label for="spellRitual">Ritual Casting</label><input type="checkbox" id="spellRitual"></span>
+            <span><label for="spellCastTime">Casting Time</label><input type="text" id="spellCastTime"></span>
+            <span><label for="spellComponents">Spell Components</label><input type="text" id="spellComponents"></span>
+            <span><label for="spellDuration">Spell Duration</label><input type="text" id="spellDuration"></span>
+            <span><label for="spellConcentration">Concentration</label><input type="checkbox" id="spellConcentration"></span>
+            <span><label for="spellClasses">Classes</label><input type="text" id="spellClasses"></span>
+            <span><label for="spellDescription">Description</label><input type="text" id="spellDescription"></span>
+            
+            <button type="button" onclick="addSpell()">Upload Spell</button>
+        </div>
+    </div>-->
+    
+    <div id="main">
+        <div id="hpSystem">
+            <div id="hpBar">
+                <span id="hpText">10/10</span>
+                <div>
+                    <div id="hpColor1">&nbsp;</div>
+                    <div id="hpColor2">&nbsp;</div>
+                    <div id="tempHP">&nbsp;</div>
+                </div>
+            </div>
+            <div id="hpEdit">
+                <button type="button" onclick="manageHealth('Damage')" style="color: rgb(185, 0, 0); font-weight: bold;">Damage</button>
+                <button type="button" onclick="manageHealth('Heal')" style="color: rgb(135, 255, 79); font-weight: bold;">Heal</button>
+                <button type="button" onclick="manageHealth('TempHP')" style="color: rgba(0, 153, 255, 0.627); font-weight: bold;">Temp HP</button>
+            </div>
+        </div>
+        <div id="actions">
+            <button type="button" onclick="displayAttacks()">Attacks</button>
+            <button type="button">Spellcasting</button>
+            <button type="button">Features</button>
+            <button type="button">Miscellaneous</button>
+        </div>
+    </div>
     <div id="classLevels">
         <p>Enter your character's Stats</p>
         <span>
@@ -38,53 +80,11 @@
         <div id="hideInput">
             <button onclick="hideInput()" id="toggleInputButton">&rlarr;</button>
         </div>
-    </div>--><!--
-    <div id="newSpell">
-        <button type="button" onclick="openAddSpellGui()">Add spell</button>
-        <div id="newSpellGui">
-            <span><label for="spellName">Spell Name</label><input type="text" id="spellName"></span>
-            <span><label for="spellLevel">Spell Level</label><input type="text" id="spellLevel"></span>
-            <span><label for="spellSchool">Spell School</label><input type="text" id="spellSchool"></span>
-            <span><label for="spellRange">Spell Range</label><input type="text" id="spellRange"></span>
-            <span><label for="spellRitual">Ritual Casting</label><input type="checkbox" id="spellRitual"></span>
-            <span><label for="spellCastTime">Casting Time</label><input type="text" id="spellCastTime"></span>
-            <span><label for="spellComponents">Spell Components</label><input type="text" id="spellComponents"></span>
-            <span><label for="spellDuration">Spell Duration</label><input type="text" id="spellDuration"></span>
-            <span><label for="spellConcentration">Concentration</label><input type="checkbox" id="spellConcentration"></span>
-            <span><label for="spellClasses">Classes</label><input type="text" id="spellClasses"></span>
-            <span><label for="spellDescription">Description</label><input type="text" id="spellDescription"></span>
-            
-            <button type="button" onclick="addSpell()">Upload Spell</button>
-        </div>
-    </div>-->
-
-    <div id="main">
-        <div id="hpSystem">
-            <div id="hpBar">
-                <span id="hpText">10/10</span>
-                <div>
-                    <div id="hpColor1">&nbsp;</div>
-                    <div id="hpColor2">&nbsp;</div>
-                    <div id="tempHP">&nbsp;</div>
-                </div>
-            </div>
-            <div id="hpEdit">
-                <button type="button" onclick="manageHealth('Damage')" style="color: rgb(185, 0, 0); font-weight: bold;">Damage</button>
-                <button type="button" onclick="manageHealth('Heal')" style="color: rgb(135, 255, 79); font-weight: bold;">Heal</button>
-                <button type="button" onclick="manageHealth('TempHP')" style="color: rgba(0, 153, 255, 0.627); font-weight: bold;">Temp HP</button>
-            </div>
-        </div>
-        <div id="actions">
-            <button type="button">Attacks</button>
-            <button type="button">Spellcasting</button>
-            <button type="button">Features</button>
-            <button type="button">Miscellaneous</button>
-        </div>
     </div>
-    <button type="button" onclick="createCreature()">Create Creature</button>
-
+    
     <script src="js/solveLevels.js"></script>
     <script src="js/userInterface.js"></script>
     <script src="js/spellHandler.js"></script>
+    <script src="js/classes.js"></script>
 </body>
 </html>

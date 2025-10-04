@@ -46,9 +46,30 @@
     height: 700px;
     border: solid black 1px;
     position: relative;
+    display: flex;
+    float: left;
 }
 
 body {
     margin: 0px;
     /* background-color: green; */
+}
+
+#actions {
+    width: 180px;
+    background-color: rgb(0,0,77);
+    height: 100px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+}
+#actions>* {
+    height: 30px;
+    border-radius: 5px;
+    border: goldenrod solid 1px;
+    background-color: rgb(0, 0, 106);
+    color: lime;
 }

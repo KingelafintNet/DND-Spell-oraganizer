@@ -119,3 +119,7 @@ function getNumberViaUser(message) {
     } while (isNaN(userInput) || userInput.trim() === ""); // Repeat if input is not a valid number
     return Number(userInput);
 }
+
+function displayAttacks() {
+    
+}

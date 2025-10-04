@@ -69,13 +69,19 @@
                 </div>
             </div>
             <div id="hpEdit">
-                <button type="button" onclick="manageHealth('Damage')">Damage</button>
-                <button type="button" onclick="manageHealth('Heal')">Heal</button>
-                <button type="button" onclick="manageHealth('TempHP')">Temp HP</button>
+                <button type="button" onclick="manageHealth('Damage')" style="color: rgb(185, 0, 0); font-weight: bold;">Damage</button>
+                <button type="button" onclick="manageHealth('Heal')" style="color: rgb(135, 255, 79); font-weight: bold;">Heal</button>
+                <button type="button" onclick="manageHealth('TempHP')" style="color: rgba(0, 153, 255, 0.627); font-weight: bold;">Temp HP</button>
             </div>
         </div>
+        <div id="actions">
+            <button type="button">Attacks</button>
+            <button type="button">Spellcasting</button>
+            <button type="button">Features</button>
+            <button type="button">Miscellaneous</button>
+        </div>
     </div>
-
+    <button type="button" onclick="createCreature()">Create Creature</button>
 
     <script src="js/solveLevels.js"></script>
     <script src="js/userInterface.js"></script>
